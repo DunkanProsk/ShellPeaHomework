@@ -24,5 +24,4 @@ function getRow($rowIndex) {
 
 print_r(getRow($row));
 
-
 ?>
