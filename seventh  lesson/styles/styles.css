@@ -1,3 +1,9 @@
+svg path {
+    stroke:inherit;
+    stroke-width:inherit;
+    fill:inherit;
+}
+
 body {
     color: #444343;
     font-family: 'Montserrat', sans-serif;
@@ -96,12 +102,24 @@ h3 {
     align-items: center;   
 }
 
+.Content__follows {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Content__follows__followers {
+    margin-right: 20px;
+}
+
 .Content__avatar {
     margin: 20px 0 20px 0px;
     width: 100px;
     height: 100px;
     border-radius: 100px;
 }
+
 
 .Content__username {
     margin: 20px 0 20px 0px;
@@ -143,6 +161,27 @@ h3 {
     background-color: #1a8bd6;
 }
 
+.Content__button__tweet__unfollow {
+    cursor: pointer;
+    margin: 25px 0 20px 0px;
+    background-color: #8e9192;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 900;
+    font-style: italic;
+    box-shadow: 0px 47px 105px rgba(0, 0, 0, 0.07),
+    0px 17.1558px 38.3267px rgba(0, 0, 0, 0.0482987),
+    0px 8.32881px 18.6069px rgba(0, 0, 0, 0.0389404),
+    0px 4.08294px 9.12146px rgba(0, 0, 0, 0.0310596),
+    0px 1.6144px 3.60664px rgba(0, 0, 0, 0.0217013);
+}
+
 .Content__tweets {
     border: solid 0px #EFF3F4;
     border-top: solid 2px #Eeeeee;
@@ -152,11 +191,41 @@ h3 {
     align-items: flex-start;   
 }
 
+.Content__tweets__retweet {
+    border-radius: 10px;
+    border: solid 2px #Eeeeee;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 40px 0 40px;
+    padding: 5px 0 10px 0;
+}
+
+.Content__tweets__retweet__index {
+    border-radius: 10px;
+    border: solid 2px #Eeeeee;
+    width: 450px;
+    margin: 0 54px 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 0 10px 0;
+}
+
+.Content__center__title {
+    margin: 50px 40px 20px 40px;
+}
+
 .Content__avatar__tweets {
     margin: 20px 20px 20px 20px;
     width: 50px;
     height: 50px;
     border-radius: 100px;
+}
+
+.Content__icon__tweets {
+    margin: 0 0 0 30px;
 }
 
 .Content__username__tweets {
@@ -261,14 +330,14 @@ input , textarea{
     justify-content: center;
 }
 
-.Content__swap__button1, .Content__swap__button2 {
+.Content__swap__button1, .Content__swap__button2, .Content__swap__button3 {
     cursor: pointer;
     border: solid 1px #EFF3F4;
     border-left: none;
     border-right: none;
     border-bottom: none;
     background-color: white;
-    width: 300px;
+    width: 200px;
     height: 50px;
     padding: 15px 30px;
     text-decoration: none;
@@ -287,6 +356,10 @@ input , textarea{
     border-left: solid 1px #EFF3F4;
 }
 
+.Content__swap__button3{
+    border-left: solid 1px #EFF3F4;
+}
+
 .Content__hashtag {
     color: #646869;
     margin: 30px 20px 20px 0;
@@ -301,4 +374,52 @@ a {
 
 .Content__form__input {
     width: 400px;
+}
+
+.Content__icons {
+    display: flex;
+    justify-content: center;
+}
+
+.iconEdit {
+    cursor: pointer;
+    margin: 0 0 0 20px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/Edit.svg);
+}
+
+.iconEdit:hover {
+    background: url(../img/EditHover.svg);
+}
+
+.iconDelete {
+    cursor: pointer;
+    margin: 0 0 0 20px;
+    width: 18px;
+    height: 20px;
+    background: url(../img/Delete.svg);
+}
+
+.iconDelete:hover {
+    background: url(../img/DeleteHover.svg);
+}
+
+.iconRetweet {
+    cursor: pointer;
+    margin: 10px 0 20px 0;
+    width: 20px;
+    height: 12px;
+    background: url(../img/Retweet.svg);
+}
+
+.iconRetweet:hover {
+    background: url(../img/RetweetHover.svg);
+}
+
+.iconRetweet {
+    width: 20px;
+    height: 12px;
+    border: none;
+    background-color: white;
 }

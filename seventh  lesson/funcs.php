@@ -21,4 +21,10 @@ function FetchAssoc($query) {
     return mysqli_fetch_assoc(ConnectDB($query));
 }
 
+function FetchAll($query) {
+    $disallow = [';'];
+    $query = str_replace($disallow, '', $query);
+    return mysqli_fetch_all(ConnectDB($query));
+}
+
 ?>
